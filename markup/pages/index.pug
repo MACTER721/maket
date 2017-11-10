@@ -1,0 +1,495 @@
+doctype html
+html(class="no-js", lang="ru")
+    include ../../node_modules/bemto.pug/bemto.pug
+    include ../components/head/head.pug
+    include ../components/example/example.pug
+    include ../components/footer/footer.pug
+
+    head
+        +head(head.defaults)
+    body
+        script(src='../../static/js/main.js')
+        +b.wrapper-first-scrin
+            
+            +b.menu._color-size
+                +b.navigation-pages
+                    +e.img
+                        img(src="%=static=%/img/content/logo_nav.png", alt="")
+                    +e.list
+                        +e.A.item(href="#") Недвижимость
+                        +e.A.item(href="#") Как купить
+                        +e.A.item(href="#") Компания
+                        +e.A.item(href="#") Партнёрам
+                        +e.A.item(href="#") Контакты
+
+            +b.information
+                +b.data._hidden
+                    +e.wrapper-content
+                        +e.stat._border-indent
+                            +e.content
+                                +e.number 130
+                                +e.text этажей
+                            +e.content
+                                +e.number 1 200
+                                +e.text квартир
+                            +e.content
+                                +e.number 127 м2
+                                +e.text сред. пл.
+                        +e.contacts._indent
+                            +e.A.phone(href='tel:+73472294962') +7 347 229-49-62
+                            +e.address Офис продаж: ул. Цюрупы, 75
+                    +e.wrap-button
+                        +e.button-description
+                            +e.SPAN.but О ПРОЕКТЕ
+                        +e.button-select-apartment
+                            +e.SPAN.but-apar ВЫБРАТЬ КВАРТИРУ
+                +b.title._color-size
+                    +e.name
+                        +e.logo
+                            img(src="%=static=%/img/content/logo_name.png", alt="")
+                        
+                        +e.city-content
+                            +e.city Уфа
+                            +e.city-param
+                                +e.quantity 10%
+                                +e.image
+                                    img(src="%=static=%/img/content/city.png", alt="")
+
+                    +e.description Литер 6. Первый высотный дом SKY-класса!
+                    +b.navigation-page._flex
+                        +e.A.item(href="#") О проекте
+                        +e.A.item(href="#") Планировка
+                        +e.A.item(href="#") Галерея
+                        +e.A.item(href="#") Преимущества
+                        +e.A.item(href="#") Расположение
+                        +e.A.item(href="#") Строительство
+
+        +b.wrapper_project
+            .container
+                +b.page-title
+                    span О проекте
+                .row
+                    .col-md-6
+                        +b.project-text
+                           
+                            +e.description
+                                +e.item Прежде, чем проектировать дом SKY-класса, мы задумались: «А что нужно современному жителю мегаполиса? Как построить дом, который будет вдохновлять Вас все время?»
+                                +e.item Мы решили, что недостаточно построить дом только красивым и комфортным. Мы постарались уйти от стандартных решений и по новому взглянуть каким должно быть жилье нового уровня, продумав каждую деталь и применив современные инновационные технологии.
+                                +e.item Для нас важно создавать комфортную среду в каждом проекте. Именно поэтому мы внедряем современные инновации в проектировании, привлекая лучших специалистов. Каждый наш проект лучше предыдущего. Покупать у нас легко, а жить в наших домах — комфортно.
+                    .col-md-1
+                    .col-md-5
+                        +b.project-selling
+                            +e.title Новый уровень Квартала Энтузиастов – первый высотный дом SKY-класса!
+                            +e.block
+                                +e.text В продаже осталось
+                                +e.number
+                                    span 42 
+                                    |квартиры
+                                +e.button
+                                    +e.SPAN.btn-span ВЫБРАТЬ КВАРТИРУ
+
+        +b.wrapper_filter
+            .container
+                +b.page-title
+                    span Планировки
+                +b.filter
+                    +e.column
+                        +e.column-name Секция
+                        +e.SELECT.column-input._size-medium
+                            +e.OPTION Секция 1
+                            +e.OPTION Секция 2
+                            +e.OPTION Секция 3
+                    +e.column
+                        +e.column-name Количество комнат
+                        +e.SELECT.column-input._size-medium
+                            +e.OPTION 2-комнатная
+                            +e.OPTION 3-комнатная
+                            +e.OPTION 1-комнатная
+                    +e.column
+                        +e.column-name Площадь
+                        +e.square
+                           +e.square-elem 40 м2
+                           +e.square-elem-hr
+                           +e.square-elem 120 м2
+
+                    +e.column
+                        +e.column-name Будущие жильцы
+                        +e.SELECT.column-input._size-big
+                            +e.OPTION Двое взрослых
+                            +e.OPTION Трое детей
+                            +e.OPTION Двое взрослых и трое детей
+
+                    +e.column
+                        +e.column-name-delete Сбросить фильтр
+                        +e.IMG.img-delete(src='%=static=%/img/content/del_fil.png')
+        
+        .container
+            +b.wrapper_sliders
+                .row
+                    .col-md-1
+                        +b.slider-tabs
+                            
+                            +b.slider-navigation
+                                +e.slide
+                                    +e.number-nav 01
+                                +e.slide
+                                    +e.number-nav 02
+                                +e.slide
+                                    +e.number-nav 03
+                                +e.slide
+                                    +e.number-nav 04
+                                +e.slide
+                                    +e.number-nav 05
+                                +e.slide
+                                    +e.number-nav 06
+                    .col-md-11
+                        +b.slider-for
+                            +b.wrapper-hidden 
+                                +b.plan-apartment
+                                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 612 792', style='enable-background:new 0 0 612 792;', xml:space='preserve')
+                                        image(style='overflow:visible;enable-background:new    ;', width='623', height='394', xlink:href='%=static=%/img/content/953E82A6.jpg')
+                                        path#path1(style='fill: transparent;stroke:#000000;stroke-miterlimit:10;', d='M599.3,58.3c0,81.5,0,81.5,0,81.5H469v42h-80V62.3L543,62\
+                                        l0.3-3.8L599.3,58.3L599.3,58.3z')
+                                        polygon#path2(style='fill:transparent;', points='167.5,58.2 167.5,174.5 181,174.5 181,177.8 185.5,179.3 185.5,181.8 200.5,181.8 \
+                                        227.8,181.8 227.8,161.3 217.3,161.5 216.5,155.5 218.8,155.8 219.3,158.3 237.5,158.5 237.5,172.3 274,172.3 274,85.5 244.8,85.8 \
+                                        235.3,86 235,77.5 279.8,78 279.8,44 274.3,44 274.3,56 274.5,58.2 ')
+                                        polygon#path3(style='fill:transparent;', points='161.3,84.3 22.5,84.3 22.5,208.8 85.8,208.8 85.8,176 78.3,176 78.5,152.5 88.3,152.5 \
+                                        88.3,137 161.3,136.8 ')
+                                        polygon#path4(style='fill:transparent;', points='110.3,300.3 110.3,220.5 165.8,220.5 165.8,233.8 176,233.3 176,213.8 274,213.8 274,246.3 \
+                                        240.8,246 240.8,257 274,257 274,318.8 167.5,318.8 167.5,300.8 ')
+                                        polygon#path5(style='fill:transparent;', points='374.3,213.1 276.8,213.1 276.8,319.4 376.5,319.4 ')
+                                        polygon#path6(style='fill:transparent;', points='482.3,211.5 482.3,317.8 429,317.8 429,298.8 422.8,299 422.8,321 378.8,321 378.8,211.5 ')
+
+                                +b.hidden-room
+                                    +b.plan-room
+                                        +e.head Планировка выбранной квартиры
+                                        +e.IMG(src="%=static=%/img/content/plan-litle.jpg", alt="")
+                                        +b.plan-room-text
+                                            +e.params-flex
+                                                +e.params-text Общая площадь
+                                                +e.params-number 76,58 м2
+                                            +e.params-flex
+                                                +e.params-text Жилая площадь
+                                                +e.params-number 28,92 м2
+                                        +b.plan-room-button
+                                            +e.button
+                                                +e.SPAN.but-apar ОФОРМИТЬ ЗАЯВКУ
+                                            +e.pay Как купить?
+                            +b.wrapper-hidden 
+                                +b.plan-apartment
+                                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 612 792', style='enable-background:new 0 0 612 792;', xml:space='preserve')
+                                        image(style='overflow:visible;enable-background:new    ;', width='623', height='394', xlink:href='%=static=%/img/content/953E82A6.jpg')
+                                        path#path1(style='fill: transparent;stroke:#000000;stroke-miterlimit:10;', d='M599.3,58.3c0,81.5,0,81.5,0,81.5H469v42h-80V62.3L543,62\
+                                        l0.3-3.8L599.3,58.3L599.3,58.3z')
+                                        polygon#path2(style='fill:transparent;', points='167.5,58.2 167.5,174.5 181,174.5 181,177.8 185.5,179.3 185.5,181.8 200.5,181.8 \
+                                        227.8,181.8 227.8,161.3 217.3,161.5 216.5,155.5 218.8,155.8 219.3,158.3 237.5,158.5 237.5,172.3 274,172.3 274,85.5 244.8,85.8 \
+                                        235.3,86 235,77.5 279.8,78 279.8,44 274.3,44 274.3,56 274.5,58.2 ')
+                                        polygon#path3(style='fill:transparent;', points='161.3,84.3 22.5,84.3 22.5,208.8 85.8,208.8 85.8,176 78.3,176 78.5,152.5 88.3,152.5 \
+                                        88.3,137 161.3,136.8 ')
+                                        polygon#path4(style='fill:transparent;', points='110.3,300.3 110.3,220.5 165.8,220.5 165.8,233.8 176,233.3 176,213.8 274,213.8 274,246.3 \
+                                        240.8,246 240.8,257 274,257 274,318.8 167.5,318.8 167.5,300.8 ')
+                                        polygon#path5(style='fill:transparent;', points='374.3,213.1 276.8,213.1 276.8,319.4 376.5,319.4 ')
+                                        polygon#path6(style='fill:transparent;', points='482.3,211.5 482.3,317.8 429,317.8 429,298.8 422.8,299 422.8,321 378.8,321 378.8,211.5 ')
+                                +b.hidden-room
+                                    +b.plan-room
+                                        +e.head Планировка выбранной квартиры
+                                        +e.IMG(src="%=static=%/img/content/plan-litle.jpg", alt="")
+                                        +b.plan-room-text
+                                            +e.params-flex
+                                                +e.params-text Общая площадь
+                                                +e.params-number 76,58 м2
+                                            +e.params-flex
+                                                +e.params-text Жилая площадь
+                                                +e.params-number 28,92 м2
+                                        +b.plan-room-button
+                                            +e.button
+                                                +e.SPAN.but-apar ОФОРМИТЬ ЗАЯВКУ
+                                            +e.pay Как купить?
+                            +b.wrapper-hidden 
+                                +b.plan-apartment
+                                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 612 792', style='enable-background:new 0 0 612 792;', xml:space='preserve')
+                                        image(style='overflow:visible;enable-background:new    ;', width='623', height='394', xlink:href='%=static=%/img/content/953E82A6.jpg')
+                                        path#path1(style='fill: transparent;stroke:#000000;stroke-miterlimit:10;', d='M599.3,58.3c0,81.5,0,81.5,0,81.5H469v42h-80V62.3L543,62\
+                                        l0.3-3.8L599.3,58.3L599.3,58.3z')
+                                        polygon#path2(style='fill:transparent;', points='167.5,58.2 167.5,174.5 181,174.5 181,177.8 185.5,179.3 185.5,181.8 200.5,181.8 \
+                                        227.8,181.8 227.8,161.3 217.3,161.5 216.5,155.5 218.8,155.8 219.3,158.3 237.5,158.5 237.5,172.3 274,172.3 274,85.5 244.8,85.8 \
+                                        235.3,86 235,77.5 279.8,78 279.8,44 274.3,44 274.3,56 274.5,58.2 ')
+                                        polygon#path3(style='fill:transparent;', points='161.3,84.3 22.5,84.3 22.5,208.8 85.8,208.8 85.8,176 78.3,176 78.5,152.5 88.3,152.5 \
+                                        88.3,137 161.3,136.8 ')
+                                        polygon#path4(style='fill:transparent;', points='110.3,300.3 110.3,220.5 165.8,220.5 165.8,233.8 176,233.3 176,213.8 274,213.8 274,246.3 \
+                                        240.8,246 240.8,257 274,257 274,318.8 167.5,318.8 167.5,300.8 ')
+                                        polygon#path5(style='fill:transparent;', points='374.3,213.1 276.8,213.1 276.8,319.4 376.5,319.4 ')
+                                        polygon#path6(style='fill:transparent;', points='482.3,211.5 482.3,317.8 429,317.8 429,298.8 422.8,299 422.8,321 378.8,321 378.8,211.5 ')
+                                +b.hidden-room
+                                    +b.plan-room
+                                        +e.head Планировка выбранной квартиры
+                                        +e.IMG(src="%=static=%/img/content/plan-litle.jpg", alt="")
+                                        +b.plan-room-text
+                                            +e.params-flex
+                                                +e.params-text Общая площадь
+                                                +e.params-number 76,58 м2
+                                            +e.params-flex
+                                                +e.params-text Жилая площадь
+                                                +e.params-number 28,92 м2
+                                        +b.plan-room-button
+                                            +e.button
+                                                +e.SPAN.but-apar ОФОРМИТЬ ЗАЯВКУ
+                                            +e.pay Как купить?
+                            +b.wrapper-hidden 
+                                +b.plan-apartment
+                                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 612 792', style='enable-background:new 0 0 612 792;', xml:space='preserve')
+                                        image(style='overflow:visible;enable-background:new    ;', width='623', height='394', xlink:href='%=static=%/img/content/953E82A6.jpg')
+                                        path#path1(style='fill: transparent;stroke:#000000;stroke-miterlimit:10;', d='M599.3,58.3c0,81.5,0,81.5,0,81.5H469v42h-80V62.3L543,62\
+                                        l0.3-3.8L599.3,58.3L599.3,58.3z')
+                                        polygon#path2(style='fill:transparent;', points='167.5,58.2 167.5,174.5 181,174.5 181,177.8 185.5,179.3 185.5,181.8 200.5,181.8 \
+                                        227.8,181.8 227.8,161.3 217.3,161.5 216.5,155.5 218.8,155.8 219.3,158.3 237.5,158.5 237.5,172.3 274,172.3 274,85.5 244.8,85.8 \
+                                        235.3,86 235,77.5 279.8,78 279.8,44 274.3,44 274.3,56 274.5,58.2 ')
+                                        polygon#path3(style='fill:transparent;', points='161.3,84.3 22.5,84.3 22.5,208.8 85.8,208.8 85.8,176 78.3,176 78.5,152.5 88.3,152.5 \
+                                        88.3,137 161.3,136.8 ')
+                                        polygon#path4(style='fill:transparent;', points='110.3,300.3 110.3,220.5 165.8,220.5 165.8,233.8 176,233.3 176,213.8 274,213.8 274,246.3 \
+                                        240.8,246 240.8,257 274,257 274,318.8 167.5,318.8 167.5,300.8 ')
+                                        polygon#path5(style='fill:transparent;', points='374.3,213.1 276.8,213.1 276.8,319.4 376.5,319.4 ')
+                                        polygon#path6(style='fill:transparent;', points='482.3,211.5 482.3,317.8 429,317.8 429,298.8 422.8,299 422.8,321 378.8,321 378.8,211.5 ')
+                                +b.hidden-room
+                                    +b.plan-room
+                                        +e.head Планировка выбранной квартиры
+                                        +e.IMG(src="%=static=%/img/content/plan-litle.jpg", alt="")
+                                        +b.plan-room-text
+                                            +e.params-flex
+                                                +e.params-text Общая площадь
+                                                +e.params-number 76,58 м2
+                                            +e.params-flex
+                                                +e.params-text Жилая площадь
+                                                +e.params-number 28,92 м2
+                                        +b.plan-room-button
+                                            +e.button
+                                                +e.SPAN.but-apar ОФОРМИТЬ ЗАЯВКУ
+                                            +e.pay Как купить?
+                            +b.wrapper-hidden 
+                                +b.plan-apartment
+                                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 612 792', style='enable-background:new 0 0 612 792;', xml:space='preserve')
+                                        image(style='overflow:visible;enable-background:new    ;', width='623', height='394', xlink:href='%=static=%/img/content/953E82A6.jpg')
+                                        path#path1(style='fill: transparent;stroke:#000000;stroke-miterlimit:10;', d='M599.3,58.3c0,81.5,0,81.5,0,81.5H469v42h-80V62.3L543,62\
+                                        l0.3-3.8L599.3,58.3L599.3,58.3z')
+                                        polygon#path2(style='fill:transparent;', points='167.5,58.2 167.5,174.5 181,174.5 181,177.8 185.5,179.3 185.5,181.8 200.5,181.8 \
+                                        227.8,181.8 227.8,161.3 217.3,161.5 216.5,155.5 218.8,155.8 219.3,158.3 237.5,158.5 237.5,172.3 274,172.3 274,85.5 244.8,85.8 \
+                                        235.3,86 235,77.5 279.8,78 279.8,44 274.3,44 274.3,56 274.5,58.2 ')
+                                        polygon#path3(style='fill:transparent;', points='161.3,84.3 22.5,84.3 22.5,208.8 85.8,208.8 85.8,176 78.3,176 78.5,152.5 88.3,152.5 \
+                                        88.3,137 161.3,136.8 ')
+                                        polygon#path4(style='fill:transparent;', points='110.3,300.3 110.3,220.5 165.8,220.5 165.8,233.8 176,233.3 176,213.8 274,213.8 274,246.3 \
+                                        240.8,246 240.8,257 274,257 274,318.8 167.5,318.8 167.5,300.8 ')
+                                        polygon#path5(style='fill:transparent;', points='374.3,213.1 276.8,213.1 276.8,319.4 376.5,319.4 ')
+                                        polygon#path6(style='fill:transparent;', points='482.3,211.5 482.3,317.8 429,317.8 429,298.8 422.8,299 422.8,321 378.8,321 378.8,211.5 ')
+                                +b.hidden-room
+                                    +b.plan-room
+                                        +e.head Планировка выбранной квартиры
+                                        +e.IMG(src="%=static=%/img/content/plan-litle.jpg", alt="")
+                                        +b.plan-room-text
+                                            +e.params-flex
+                                                +e.params-text Общая площадь
+                                                +e.params-number 76,58 м2
+                                            +e.params-flex
+                                                +e.params-text Жилая площадь
+                                                +e.params-number 28,92 м2
+                                        +b.plan-room-button
+                                            +e.button
+                                                +e.SPAN.but-apar ОФОРМИТЬ ЗАЯВКУ
+                                            +e.pay Как купить?
+                            +b.wrapper-hidden 
+                                +b.plan-apartment
+                                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 612 792', style='enable-background:new 0 0 612 792;', xml:space='preserve')
+                                        image(style='overflow:visible;enable-background:new    ;', width='623', height='394', xlink:href='%=static=%/img/content/953E82A6.jpg')
+                                        path#path1(style='fill: transparent;stroke:#000000;stroke-miterlimit:10;', d='M599.3,58.3c0,81.5,0,81.5,0,81.5H469v42h-80V62.3L543,62\
+                                        l0.3-3.8L599.3,58.3L599.3,58.3z')
+                                        polygon#path2(style='fill:transparent;', points='167.5,58.2 167.5,174.5 181,174.5 181,177.8 185.5,179.3 185.5,181.8 200.5,181.8 \
+                                        227.8,181.8 227.8,161.3 217.3,161.5 216.5,155.5 218.8,155.8 219.3,158.3 237.5,158.5 237.5,172.3 274,172.3 274,85.5 244.8,85.8 \
+                                        235.3,86 235,77.5 279.8,78 279.8,44 274.3,44 274.3,56 274.5,58.2 ')
+                                        polygon#path3(style='fill:transparent;', points='161.3,84.3 22.5,84.3 22.5,208.8 85.8,208.8 85.8,176 78.3,176 78.5,152.5 88.3,152.5 \
+                                        88.3,137 161.3,136.8 ')
+                                        polygon#path4(style='fill:transparent;', points='110.3,300.3 110.3,220.5 165.8,220.5 165.8,233.8 176,233.3 176,213.8 274,213.8 274,246.3 \
+                                        240.8,246 240.8,257 274,257 274,318.8 167.5,318.8 167.5,300.8 ')
+                                        polygon#path5(style='fill:transparent;', points='374.3,213.1 276.8,213.1 276.8,319.4 376.5,319.4 ')
+                                        polygon#path6(style='fill:transparent;', points='482.3,211.5 482.3,317.8 429,317.8 429,298.8 422.8,299 422.8,321 378.8,321 378.8,211.5 ')
+                                +b.hidden-room
+                                    +b.plan-room
+                                        +e.head Планировка выбранной квартиры
+                                        +e.IMG(src="%=static=%/img/content/plan-litle.jpg", alt="")
+                                        +b.plan-room-text
+                                            +e.params-flex
+                                                +e.params-text Общая площадь
+                                                +e.params-number 76,58 м2
+                                            +e.params-flex
+                                                +e.params-text Жилая площадь
+                                                +e.params-number 28,92 м2
+                                        +b.plan-room-button
+                                            +e.button
+                                                +e.SPAN.but-apar ОФОРМИТЬ ЗАЯВКУ
+                                            +e.pay Как купить?
+        
+        +b.wrapper_gallery
+            .container
+                +b.page-title
+                    span Галерея
+                .row
+                    .col-md-1
+                    .col-md-4
+                        +b.image-galery
+                            +e.IMG.image.img-responsive(src="%=static=%/img/content/g_01.jpg", alt="")
+                            +e.number 01
+                        +b.image-galery
+                            +e.IMG.image._indent.img-responsive(src="%=static=%/img/content/g_03.jpg", alt="")
+                            +e.number._indent 03
+                    .col-md-7
+                        +b.image-galery
+                            +e.IMG.image.img-responsive(src="%=static=%/img/content/g_02.jpg", alt="")
+                            +e.number 02
+                        +b.flex-gallery
+                            +b.image-galery
+                                +e.IMG.image._indent.img-responsive(src="%=static=%/img/content/g_04.jpg", alt="")
+                                +e.number._indent-top 04
+                            +e.image
+                                +b.image-galery
+                                    +e.IMG.image._indent-left.img-responsive(src="%=static=%/img/content/g_05.jpg", alt="")
+                                    +e.number._indent-left 05
+                                +b.image-galery
+                                    +e.IMG.image._indent-left.img-responsive(src="%=static=%/img/content/g_06.jpg", alt="")
+                                    +e.number._indent-left 06
+
+        +b.wrapper_advantages
+            .container
+                +b.page-title._indent 
+                    span Преимущества
+                .row
+                    .col-md-3
+                        +b.advantages
+                            +e.image
+                                img(src="%=static=%/img/content/advantages/p_01.png", alt="")
+                            +e.head Панорамный
+                            +e.content-text Витражное остекление в каждой квартире, просторные светлые квартиры
+                    .col-md-3
+                        +b.advantages
+                            +e.image
+                                img(src="%=static=%/img/content/advantages/p_02.png", alt="")
+                            +e.head Безопасный
+                            +e.content-text Уютный и безопасный двор с ограниченным въездом автомобилей
+                    .col-md-3
+                        +b.advantages
+                            +e.image
+                                img(src="%=static=%/img/content/advantages/p_03.png", alt="")
+                            +e.head Комфортный
+                            +e.content-text Сейфовая дверь, шумоизоляция, приборы учета, ниши для кондиционеров
+                    .col-md-3
+                        +b.advantages
+                            +e.image
+                                img(src="%=static=%/img/content/advantages/p_04.png", alt="")
+                            +e.head Спортивный
+                            +e.content-text Велодорожки, уличные тренажеры, футбол, волейбол, скалодром, каток
+                .row.row-indent-top
+                    .col-md-3
+                        +b.advantages
+                            +e.image
+                                img(src="%=static=%/img/content/advantages/p_05.png", alt="")
+                            +e.head Панорамный
+                            +e.content-text Витражное остекление в каждой квартире, просторные светлые квартиры
+                    .col-md-3
+                        +b.advantages
+                            +e.image
+                                img(src="%=static=%/img/content/advantages/p_06.png", alt="")
+                            +e.head Безопасный
+                            +e.content-text Уютный и безопасный двор с ограниченным въездом автомобилей
+                    .col-md-3
+                        +b.advantages
+                            +e.image
+                                img(src="%=static=%/img/content/advantages/p_07.png", alt="")
+                            +e.head Комфортный
+                            +e.content-text Сейфовая дверь, шумоизоляция, приборы учета, ниши для кондиционеров
+                    .col-md-3
+                        +b.advantages
+                            +e.image
+                                img(src="%=static=%/img/content/advantages/p_08.png", alt="")
+                            +e.head Спортивный
+                            +e.content-text Велодорожки, уличные тренажеры, футбол, волейбол, скалодром, каток
+
+        +b.wrapper_map
+            +b.nav-map
+                +e.head Расположение
+                +e.description «Квартал Энтузиастов» находится в 15 минутах езды от центра города Уфы. Добраться до него можно с четырех крупных магистралей города, в том числе по главной транспортной артерии города — проспекту Салавата Юлаева.
+                +b.content-map
+                    +e.head РЯДОМ НАХОДЯТСЯ
+                    +b.places-map
+                        +e.colum-elem
+                            +e.line-elem
+                                +e.flex-elem
+                                    +e.number-elem 3
+                                    +e.name-elem школы
+                            +e.line-elem
+                                +e.flex-elem
+                                    +e.number-elem 1
+                                    +e.name-elem
+                                        |университет
+                                        br
+                                        |ВЭГУ
+                            +e.line-elem
+                                +e.flex-elem
+                                    +e.number-elem 1
+                                    +e.name-elem ТЦ "Планета"
+                        +e.colum-elem
+                            +e.line-elem
+                                +e.flex-elem
+                                    +e.number-elem 6
+                                    +e.name-elem
+                                        |детских
+                                        br
+                                        |садиков
+                            +e.line-elem
+                                +e.flex-elem
+                                    +e.number-elem 4
+                                    +e.name-elem аптеки
+                            +e.line-elem
+                                +e.flex-elem
+                                    +e.number-elem 1
+                                    +e.name-elem ипподром "Акбузат"
+                        +e.colum-elem
+                            +e.line-elem
+                                +e.flex-elem._margin-minus
+                                    +e.number-elem 2
+                                    +e.name-elem
+                                        |школы
+                                        br
+                                        |ин. языков
+                            +e.line-elem
+                                +e.flex-elem._margin-minus
+                                    +e.number-elem 4
+                                    +e.name-elem стоматологии
+
+        +b.wrapper_graph
+            .container
+                +b.page-title._min-indent
+                    span Строительство
+                +b.graph
+                +b.button-translate
+                    +e.IMG(src='%=static=%/img/content/arrow-watch.png')
+                    +e.button-text СМОТРЕТЬ ТРАНСЛЯЦИЮ      
+
+        +b.wrapper_footer
+            .container
+                +b.footer
+                    +e.company © 2008—2017 ООО «Талан»
+                    +b.footer-navigation
+                        +e.A.link(href='#') Недвижимость
+                        +e.A.link(href='#') Как купить
+                        +e.A.link(href='#') Компания
+                        +e.A.link(href='#') Партнёрам
+                        +e.A.link(href='#') Контакты
+                    +b.social
+                        +e.A.icon(href='#')
+                            img(src='%=static=%/img/content/vk.png')
+                        +e.A.icon(href='#')
+                            img(src='%=static=%/img/content/fb.png')
+                        +e.A.icon(href='#')
+                            img(src='%=static=%/img/content/ins.png')
+                        +e.A.icon(href='#')
+                            img(src='%=static=%/img/content/tw.png')
+
+                +b.sign
+                    +e.A.link(href='http://crtweb.ru/') Разработка сайта - Creative 

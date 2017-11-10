@@ -1,0 +1,765 @@
+/*@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,400,500,700&subset=cyrillic')*/
+
+/*.container
+	@media (min-width: 1170px)
+		width 1170px !important*/
+		
+.wrapper-first-scrin
+	position relative
+
+.menu
+	&_color-size
+		width 368px
+		height 389px
+		background-color #21a643
+		position absolute
+		left 0
+		top 0
+		z-index 1
+		
+.navigation-pages
+	padding-top 58px
+	padding-left 90px
+	z-index 4
+	position relative
+
+	&__list
+		padding-top 52px
+		
+	&__item	
+		display block
+		color #fff
+		font-size 14px
+		line-height 1
+		padding-bottom 25px
+		
+	&__item:hover
+		text-decoration none
+		color #fff
+
+.data
+	height 748px
+	background url('%=static=%/content/btwo_img.jpg')
+	background-repeat no-repeat
+	background-size cover
+	
+	&_hidden
+		overflow hidden
+	    position relative
+	    top 20px
+	    z-index 2
+	    right 20px
+	    margin-left 350px
+	    
+	&__stat
+		&_border-indent
+			margin-top 70px
+			margin-left 70px
+			padding 25px 33px 0 42px
+			border 1px dotted #fff
+			height 105px
+			width 400px
+			display flex
+			justify-content space-between
+			color #fff
+			text-align center
+			line-height 1
+			
+	&__wrapper-content
+		display flex
+		justify-content space-between
+		text-align center
+	&__number
+		font-size 25px
+	&__text
+		font-size 13px
+		padding-top 10px
+	&__contacts
+		&_indent
+			padding-top 95px
+			padding-right 78px
+	&__phone
+		display block
+		color #fff
+		font-weight 700
+		font-size 18px
+		line-height 1
+		padding-bottom 15px
+	&__address
+		color #fff
+		font-size 12px
+		line-height 1
+
+	&__wrap-button
+		display flex
+		position absolute
+		bottom 75px
+		right 78px
+	&__button-description
+		display flex
+		justify-content center
+		align-items center
+		background-color #fff
+		font-size 12px
+		color #1a1b28
+		margin-right 20px
+		width 148px
+		height 50px
+		cursor pointer
+		overflow hidden
+		transition all .3s ease-out 0s
+		transform translateY(0)
+		
+	&__but
+		color #1a1b28
+		z-index 4
+		height 50px
+		padding-top 16px
+		padding-left 40px
+		width 180px
+		&:hover
+			color #fff
+	&__button-description::after
+		position absolute
+		content ''
+		top 0
+		left 0
+		bottom 0
+		right 0
+		transform translate(-13em, 0)
+		width 0
+		background #21a643
+		z-index 3
+
+	&__button-description:hover::after, 
+	&__button-description:focus::after 
+		animation sheen 1s forwards
+		width 180px
+
+	@keyframes sheen {
+	  100% {
+	    transform: translate(0em, 0);
+	  }
+	}
+			
+
+	&__button-select-apartment
+		display flex
+		justify-content center
+		align-items center
+		background-color #21a643
+		font-size 12px
+		color #fff
+		width 200px
+		height 50px
+		cursor pointer
+		overflow hidden
+		transition all .3s ease-out 0s
+		transform translateY(0)
+
+	&__but-apar
+		color #fff
+		z-index 4
+		height 50px
+		padding-top 16px
+		padding-left 40px
+		width 200px
+		&:hover
+			color #1a1b28
+			
+	&__button-select-apartment::after
+		position absolute
+		content ''
+		top 0
+		left 0
+		bottom 0
+		right 0
+		transform translate(-17em, 0)
+		width 0
+		background #fff
+		z-index 3
+
+	&__button-select-apartment:hover::after, 
+	&__button-select-apartment:focus::after 
+		animation sheen 1s forwards
+		width 200px
+	
+		
+.title
+	&_color-size
+		background #fff
+	    position absolute
+	    z-index 3
+	    width 730px
+	    height 384px
+	    bottom -20px
+	&__name
+		display flex
+		justify-content space-between
+		align-items flex-end
+		padding 50px 0 50px 90px
+		width 600px
+	&__logo
+		margin-bottom 12px
+	&__city-content
+		display flex
+		align-items flex-end
+	&__city
+		width 42px
+		height 29px
+		background-color #21a643
+		color #fff
+		font-size 14px
+		display flex
+		justify-content center
+		align-items center
+		border-radius 1px
+		margin-bottom 15px
+		margin-right 65px
+	
+	&__quantity
+		line-height 1
+		padding-bottom 8px
+		font-size 12px
+		text-align center
+		
+	&__description
+		color #1a1b28
+		font-size 40px
+		line-height 1
+		padding-left 90px
+		width 600px
+		padding-bottom 60px
+
+.navigation-page
+	&_flex
+		display flex
+		justify-content space-between
+		align-items center
+		width 600px
+		padding-left 90px
+	&__item
+		color #848486
+		font-size 13px
+		line-height 1
+		text-decoration none
+		cursor pointer
+		&:hover
+			color #21a643
+
+/*О проекте*/
+
+.wrapper_project
+	padding-top 135px
+	
+.page-title
+	font-size 32px
+	color #1a1b28
+	line-height 1
+	padding-right 33px
+	font-weight 700
+	position relative
+	padding-bottom 45px
+	
+	&_indent
+		padding-bottom 90px
+		color #fff
+		
+	&_min-indent
+		padding-bottom 10px
+	
+	span
+		position relative
+		display inline-block
+		
+		&:after
+			position absolute
+			content ''
+			top 18px
+			right -57px
+			width 42px
+			height 3px
+			background-color #21a643
+		
+		
+.project-text
+	&__item
+		font-size 14px
+		line-height 24px
+		padding-bottom 30px
+		
+.project-selling
+	&__title
+		font-weight 700
+		font-size 24px
+		color #1a1b28
+		line-height 30px
+		width 402px
+		padding-bottom 60px
+	&__block
+		position relative
+		width 200px
+		height 146px
+		background-color #fff
+		box-shadow 0 6px 50px 0 rgba(0,0,0,0.1)
+		padding 25px 0 0 25px
+		
+	&__text
+		padding-left 5px
+		padding-bottom 14px
+		font-size 13px
+		color #1a1b28
+		line-height 1
+	&__number span
+		font-size 24px
+		line-height 1
+		
+	&__number
+		font-size 12px
+		line-height 1
+		font-weight 700
+	&__button
+		background-color #21a643
+		cursor pointer
+		position absolute
+		bottom 0
+		left 0px
+		display flex
+		justify-content center
+		align-items center
+		width 200px
+		height 50px
+		overflow hidden
+		transition all .3s ease-out 0s
+		transform translateY(0)
+	&__btn-span
+		font-size 12px
+		color #fff
+		z-index 4
+		height 50px
+		padding-top 16px
+		padding-left 40px
+		width 200px
+		&:hover
+			color #1a1b28
+	
+	&__button::after
+		position absolute
+		content ''
+		top 0
+		left 0
+		bottom 0
+		right 0
+		transform translate(-17em, 0)
+		width 0
+		background #fff
+		z-index 3
+
+	&__button:hover::after, 
+	&__button:focus::after 
+		animation sheen 1s forwards
+		width 200px
+		
+/*Планировки*/
+.wrapper_filter
+	padding-top 130px
+
+.filter
+	display flex
+	justify-content space-between
+	
+	&__column-name
+		font-size 12px
+		line-height 1
+		padding-left 2px
+		padding-bottom 20px
+		color #94959b
+	&__square
+		display flex
+	&__square-elem
+		height 35px
+		width 45px
+		padding-top 8px
+		border-bottom 1px solid #e8e8e9
+	&__square-elem-hr
+		width 7px
+		height 1px
+		background-color #e8e8e9
+		margin-left 14px
+		margin-right 15px
+		margin-top 18px
+	&__column-input
+		&_size-medium
+			width 184px
+			height 35px
+			border none
+			border-bottom 1px solid #e8e8e9
+			&:focus
+				outline none
+	&__column-input
+		&_size-big
+			width 230px
+			height 35px
+			border none
+			border-bottom 1px solid #e8e8e9
+			&:focus
+				outline none
+	&__delete-filter
+		display flex
+		justify-content center
+		align-items flex-end
+		padding-bottom 12px
+		cursor pointer
+	&__text-delete
+		font-size 12px
+		line-height 1
+		padding-right 16px
+		color #94959b
+
+.wrapper_sliders
+	box-shadow 0px 50px 80px -50px rgba(0,0,0,0.5)
+	padding-bottom 60px
+.slider-tabs
+	padding-top 95px
+
+.slick-slide:focus
+	outline none
+	
+.slider-navigation .slick-prev:before,
+.slider-navigation .slick-next:before
+	opacity 1 !important
+	content '' !important
+
+.slider-navigation .slick-prev
+	top 0% !important
+	left calc(50% - 24px) !important
+	z-index 9
+	background-repeat no-repeat
+	background-image url('%=static=%/content/prev.png')
+	background-position center
+	background-color #fff
+	height 45px
+	width 41px
+	
+.slider-navigation .slick-next
+	background-position center
+	right calc(50% - 16px) !important
+	top 420px
+	background-repeat no-repeat
+	background-image url(../img//content/next.png)
+	height 43px
+	width 40px
+	background-color #fff
+
+.slider-navigation
+	width 50px
+
+	&__slide
+		margin-top 12px
+		margin-bottom 12px
+		&:focus
+			outline none
+			
+
+	&__number-nav
+		width 41px
+		height 41px
+		font-size 18px
+		display flex
+		justify-content center
+		align-items center
+		cursor pointer
+		z-index 6
+
+
+
+.slider-navigation .slick-center
+	width 41px !important
+	height 41px !important
+	border 1px solid #21a643 !important
+	color #21a643
+	font-weight 700
+	display flex !important
+	justify-content center
+	align-items center
+
+.wrapper-hidden
+	display flex !important
+	justify-content space-between
+	align-items center
+	padding-top 95px
+.plan-room
+	&__head
+		font-weight 700
+		font-size 20px
+		color #1a1b28
+		line-height 1
+		padding-bottom 40px
+.plan-room-button
+	display flex
+	align-items center
+	&__button
+		display flex
+		justify-content center
+		align-items center
+		background-color #21a643
+		font-size 12px
+		color #fff
+		width 200px
+		height 50px
+		cursor pointer
+		overflow hidden
+		transition all .3s ease-out 0s
+		transform translateY(0)
+
+	&__but-apar
+		color #fff
+		z-index 4
+		height 50px
+		padding-top 16px
+		padding-left 40px
+		width 200px
+		&:hover
+			color #1a1b28
+
+	&__button::after
+		position absolute
+		content ''
+		top 0
+		left 0
+		bottom 0
+		right 0
+		transform translate(-17em, 0)
+		width 0
+		background #fff
+		z-index 3
+
+	&__button:hover::after, 
+	&__button:focus::after 
+		animation sheen 1s forwards
+		width 200px
+	&__pay
+		font-size 12px
+		color #94959b
+		line-height 1
+		font-weight 700
+		padding-left 28px
+		cursor pointer
+.plan-apartment
+	width 600px
+	height 386px
+
+
+path#path1:hover, #path2:hover, #path3:hover,
+#path4:hover, #path5:hover, #path6:hover
+	fill rgba(0,0,0,0.2) !important
+	
+.hidden-room
+	display none
+.plan-room-text
+	width 220px
+	display flex
+	justify-content space-between
+	align-items center
+	padding-top 40px
+	padding-bottom 30px
+	&__params-text
+		font-size 12px
+		color #94959b
+		line-height 1
+		font-weight 700
+		padding-bottom 10px
+	&__params-number
+		font-size 12px
+		color #1a1b28
+		line-height 1
+		font-weight 700
+
+.wrapper_gallery
+	padding-top 95px
+	padding-bottom 105px
+
+.image-galery
+	position relative
+	&__image
+		&_indent
+			margin 30px 0 0 auto
+		&_indent-left
+			margin-top 30px
+			margin-left 30px
+	&__number
+		position absolute
+		top 46px
+		left 42px
+		font-size 60px
+		color #fff
+		line-height 1
+		&_indent
+			left 125px
+		&_indent-left
+			left 68px
+		&_indent-top
+			top 65px
+
+		
+.flex-gallery
+	display flex
+
+.wrapper_advantages
+	background-color #1a1b28
+	padding-top 100px
+	padding-bottom 470px
+
+.advantages
+	display flex
+	justify-content center
+	align-items center
+	flex-direction column
+	&__image
+		margin 0 auto
+		height 60px
+		display flex
+		justify-content center
+		align-items center
+	&__head
+		font-size 16px
+		line-height 1
+		color #21a643
+		font-weight bold
+		padding-top 40px
+		padding-bottom 22px
+	&__content-text
+		text-align center
+		font-size 13px
+		line-height 1
+		color #fff
+		padding 0 33px
+
+.row-indent-top
+	padding-top 70px
+
+.wrapper_map
+	margin -320px auto 95px auto
+	height 640px
+	width 1326px
+	position relative
+	background-image url('%=static=%/content/map_img.jpg')
+	background-position center
+	background-repeat no-repeat
+
+.nav-map
+	position absolute
+	height 640px
+	width 490px
+	top -40px
+	right 20px
+	background-color #21a643
+	padding-top 65px
+	
+	&__head
+		padding-left 60px
+		font-size 32px
+		line-height 1
+		padding-bottom 50px
+		color #fff
+	&__head:after
+		position absolute
+		content ''
+		top 18px
+		left 315px
+		margin-top 65px
+		bottom 0
+		right 0
+		z-index 3
+		width 42px
+		height 3px
+		background-color #fff
+	&__description
+		color #fff
+		font-size 14px
+		line-height 20px
+		padding-left 60px
+		padding-right 95px
+
+.content-map
+	background-color #fff
+	width 100%
+	height 320px
+	position absolute
+	bottom 0
+	&__head
+		padding-top 55px
+		padding-left 60px
+.places-map
+	display flex
+	padding-left 46px
+	&__flex-elem
+		display flex
+		justify-content flex-start
+		align-items flex-end
+		padding-top 12px
+		padding-left 14px
+		height 55px
+		width 150px
+		&_margin-minus
+			margin-left -30px
+	&__number-elem
+		color #21a643
+		line-height 25px
+		font-size 32px
+		padding-right 8px
+	&__name-elem
+		line-height 1
+		color #1a1b28
+		font-size 12px
+.wrapper_graph
+	padding-bottom 130px
+.graph
+	background-image url('%=static=%/content/back-plan.png')
+	background-repeat no-repeat
+	background-position center
+	background-size contain
+	height 510px
+	width auto
+	
+.button-translate
+	display flex
+	justify-content center
+	align-items center
+	background-color #21a643
+	width 235px
+	height 50px
+	margin 20px auto 0 auto
+	cursor pointer
+	&__button-text
+		color #fff
+		line-height 1
+		font-size 12px
+		padding-left 10px
+
+.footer
+	display flex
+	justify-content space-between
+	align-items center
+	&__company
+		color #a7a7aa
+		font-size 14px
+		line-height 1
+.footer-navigation
+	&__link
+		color #1a1b28
+		line-height 1
+		font-size 14px
+		margin 0 15px
+		&:hover
+			color #21a643
+
+.social
+	&__icon
+		margin 0 5px
+
+.sign
+	&__link
+		padding-top 5px
+		color #a7a7aa
+		display block
