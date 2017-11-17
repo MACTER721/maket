@@ -12,7 +12,17 @@ $(document).ready(function(){
 /*		centerPadding: '100px',*/
 		slidesToScroll: 1,
 		focusOnSelect: true,
-		asNavFor: '.slider-for'
+		asNavFor: '.slider-for',
+		responsive: [
+		    {
+		      breakpoint: 991,
+		      settings: {
+		      	vertical: false,
+		        slidesToShow: 5,
+		        slidesToScroll: 1,
+		      }
+		    }
+		]
 	});
 	$('.slider-for').slick({
 		slidesToShow: 1,

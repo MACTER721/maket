@@ -16,7 +16,7 @@ html(class="no-js", lang="ru")
                     +e.img
                         img(src="%=static=%/img/content/logo_nav.png", alt="")
                     +e.list
-                        +e.A.item(href="#") Недвижимость
+                        +e.A.item._active(href="#") Недвижимость
                         +e.A.item(href="#") Как купить
                         +e.A.item(href="#") Компания
                         +e.A.item(href="#") Партнёрам
@@ -51,9 +51,12 @@ html(class="no-js", lang="ru")
                         +e.city-content
                             +e.city Уфа
                             +e.city-param
-                                +e.quantity 10%
-                                +e.image
-                                    img(src="%=static=%/img/content/city.png", alt="")
+                                
+                                +b.quantity
+                                    +e.quantity-rate 10%
+                                    +e.IMG.img_first_positional(src="%=static=%/img/content/city.png", alt="")
+                                    +e.IMG.img_two_positional(src="%=static=%/img/content/city-2.png", alt="")
+                                    
 
                     +e.description Литер 6. Первый высотный дом SKY-класса!
                     +b.navigation-page._flex
@@ -334,25 +337,32 @@ html(class="no-js", lang="ru")
                     .col-md-1
                     .col-md-4
                         +b.image-galery
-                            +e.IMG.image.img-responsive(src="%=static=%/img/content/g_01.jpg", alt="")
+                            +e.image
+                                img.img-responsive(src="%=static=%/img/content/g_01.jpg", alt="")
+                            //- +e.IMG.image.img-responsive(src="%=static=%/img/content/g_01.jpg", alt="")
                             +e.number 01
                         +b.image-galery
-                            +e.IMG.image._indent.img-responsive(src="%=static=%/img/content/g_03.jpg", alt="")
+                            +e.image._indent
+                                img.img-responsive(src="%=static=%/img/content/g_03.jpg", alt="")
                             +e.number._indent 03
                     .col-md-7
                         +b.image-galery
-                            +e.IMG.image.img-responsive(src="%=static=%/img/content/g_02.jpg", alt="")
+                            +e.image
+                                img.img-responsive(src="%=static=%/img/content/g_02.jpg", alt="")
                             +e.number 02
                         +b.flex-gallery
                             +b.image-galery
-                                +e.IMG.image._indent.img-responsive(src="%=static=%/img/content/g_04.jpg", alt="")
+                                +e.image._indent
+                                    img.img-responsive(src="%=static=%/img/content/g_04.jpg", alt="")
                                 +e.number._indent-top 04
                             +e.image
                                 +b.image-galery
-                                    +e.IMG.image._indent-left.img-responsive(src="%=static=%/img/content/g_05.jpg", alt="")
+                                    +e.image._indent-left
+                                        img.img-responsive(src="%=static=%/img/content/g_05.jpg", alt="")
                                     +e.number._indent-left 05
                                 +b.image-galery
-                                    +e.IMG.image._indent-left.img-responsive(src="%=static=%/img/content/g_06.jpg", alt="")
+                                    +e.image._indent-left._mobil-indent
+                                        img.img-responsive(src="%=static=%/img/content/g_06.jpg", alt="")
                                     +e.number._indent-left 06
 
         +b.wrapper_advantages
@@ -410,57 +420,58 @@ html(class="no-js", lang="ru")
                             +e.head Спортивный
                             +e.content-text Велодорожки, уличные тренажеры, футбол, волейбол, скалодром, каток
 
-        +b.wrapper_map
-            +b.nav-map
-                +e.head Расположение
-                +e.description «Квартал Энтузиастов» находится в 15 минутах езды от центра города Уфы. Добраться до него можно с четырех крупных магистралей города, в том числе по главной транспортной артерии города — проспекту Салавата Юлаева.
-                +b.content-map
-                    +e.head РЯДОМ НАХОДЯТСЯ
-                    +b.places-map
-                        +e.colum-elem
-                            +e.line-elem
-                                +e.flex-elem
-                                    +e.number-elem 3
-                                    +e.name-elem школы
-                            +e.line-elem
-                                +e.flex-elem
-                                    +e.number-elem 1
-                                    +e.name-elem
-                                        |университет
-                                        br
-                                        |ВЭГУ
-                            +e.line-elem
-                                +e.flex-elem
-                                    +e.number-elem 1
-                                    +e.name-elem ТЦ "Планета"
-                        +e.colum-elem
-                            +e.line-elem
-                                +e.flex-elem
-                                    +e.number-elem 6
-                                    +e.name-elem
-                                        |детских
-                                        br
-                                        |садиков
-                            +e.line-elem
-                                +e.flex-elem
-                                    +e.number-elem 4
-                                    +e.name-elem аптеки
-                            +e.line-elem
-                                +e.flex-elem
-                                    +e.number-elem 1
-                                    +e.name-elem ипподром "Акбузат"
-                        +e.colum-elem
-                            +e.line-elem
-                                +e.flex-elem._margin-minus
-                                    +e.number-elem 2
-                                    +e.name-elem
-                                        |школы
-                                        br
-                                        |ин. языков
-                            +e.line-elem
-                                +e.flex-elem._margin-minus
-                                    +e.number-elem 4
-                                    +e.name-elem стоматологии
+        .container-fluid    
+            +b.wrapper_map
+                +b.nav-map
+                    +e.head Расположение
+                    +e.description «Квартал Энтузиастов» находится в 15 минутах езды от центра города Уфы. Добраться до него можно с четырех крупных магистралей города, в том числе по главной транспортной артерии города — проспекту Салавата Юлаева.
+                    +b.content-map
+                        +e.head РЯДОМ НАХОДЯТСЯ
+                        +b.places-map
+                            +e.colum-elem
+                                +e.line-elem
+                                    +e.flex-elem
+                                        +e.number-elem 3
+                                        +e.name-elem школы
+                                +e.line-elem
+                                    +e.flex-elem
+                                        +e.number-elem 1
+                                        +e.name-elem
+                                            |университет
+                                            br
+                                            |ВЭГУ
+                                +e.line-elem
+                                    +e.flex-elem
+                                        +e.number-elem 1
+                                        +e.name-elem ТЦ "Планета"
+                            +e.colum-elem
+                                +e.line-elem
+                                    +e.flex-elem
+                                        +e.number-elem 6
+                                        +e.name-elem
+                                            |детских
+                                            br
+                                            |садиков
+                                +e.line-elem
+                                    +e.flex-elem
+                                        +e.number-elem 4
+                                        +e.name-elem аптеки
+                                +e.line-elem
+                                    +e.flex-elem
+                                        +e.number-elem 1
+                                        +e.name-elem ипподром "Акбузат"
+                            +e.colum-elem
+                                +e.line-elem
+                                    +e.flex-elem._margin-minus
+                                        +e.number-elem 2
+                                        +e.name-elem
+                                            |школы
+                                            br
+                                            |ин. языков
+                                +e.line-elem
+                                    +e.flex-elem._margin-minus
+                                        +e.number-elem 4
+                                        +e.name-elem стоматологии
 
         +b.wrapper_graph
             .container
