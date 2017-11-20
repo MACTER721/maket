@@ -6,7 +6,7 @@
 		
 .wrapper-first-scrin
 	position relative
-	display none
+	
 
 
 .menu
@@ -18,14 +18,43 @@
 		left 0
 		top 0
 		z-index 1
+		@media (max-width 1100px)
+			width 100%
+			height 60px
+			position relative
+			display flex
+			justify-content space-between
+			align-items center
+		@media (max-width 768px)
+			height auto
+			padding-top 10px
+			padding-bottom 10px
 		
 .navigation-pages
 	padding-top 58px
 	z-index 4
 	position relative
-
+	@media (max-width 1100px)
+		display flex
+		width 100%
+		justify-content space-around
+		align-items center
+		padding-top 0
+	@media (max-width 768px)
+		flex-direction column
+	&__img
+		@media (max-width 768px)
+			margin-bottom 10px
 	&__list
 		padding-top 52px
+		@media (max-width 1100px)
+			display flex
+			padding-top 0
+			justify-content space-between
+			width 70%
+		@media (max-width 768px)
+			width 90%
+			flex-wrap wrap
 	&__item:before
 		display block
 		width 30px
@@ -34,6 +63,8 @@
 		left 0
 		background-color rgba(225,225,225,0.3)
 		content ''
+		@media (max-width 1100px)
+			width 0
 	&__item
 		padding-left 90px
 		display block
@@ -41,6 +72,9 @@
 		font-size 14px
 		line-height 1
 		margin-bottom 25px
+		@media (max-width 1100px)
+			padding-left 0
+			margin-bottom 0
 		&_active
 			font-weight 700
 		&_active:before
@@ -52,6 +86,8 @@
 			background-color rgba(225,225,225,1)
 			content ''
 			top 50%
+			@media (max-width 1100px)
+				width 0
 
 
 		
@@ -64,15 +100,22 @@
 	background url('%=static=%/content/btwo_img.jpg')
 	background-repeat no-repeat
 	background-size cover
+	@media (max-width 1100px)
+		height 400px
 	
 	&_hidden
 		overflow hidden
-	    position relative
-	    top 20px
-	    z-index 2
-	    right 20px
-	    margin-left 350px
-	    
+		position relative
+		top 20px
+		z-index 2
+		right 20px
+		margin-left 350px
+		@media (max-width 1100px)
+			margin-left 0
+			right 0
+			top 0
+			width 100%
+
 	&__stat
 		&_border-indent
 			margin-top 70px
@@ -86,6 +129,14 @@
 			color #fff
 			text-align center
 			line-height 1
+			@media (max-width 1100px)
+				width auto
+				flex-direction column
+				height auto
+				margin-top 30px
+				padding 15px 10px
+			@media (max-width 768px)
+				margin-left 15px
 			
 	&__wrapper-content
 		display flex
@@ -93,13 +144,21 @@
 		text-align center
 	&__number
 		font-size 25px
+		@media (max-width 1100px)
+			font-size 18px
 	&__text
 		font-size 13px
 		padding-top 10px
+		@media (max-width 1100px)
+			padding-top 2px
+			padding-bottom 10px
 	&__contacts
 		&_indent
 			padding-top 95px
 			padding-right 78px
+			@media (max-width 768px)
+				padding-top 30px
+				padding-right 15px
 	&__phone
 		display block
 		color #fff
@@ -117,6 +176,12 @@
 		position absolute
 		bottom 75px
 		right 78px
+		@media (max-width 1100px)
+			right calc(50% - 184px)
+		@media (max-width 768px)
+			flex-direction column
+			right calc(50% - 100px)
+			bottom 50px
 	&__button-description
 		display flex
 		justify-content center
@@ -131,6 +196,10 @@
 		overflow hidden
 		transition all .3s ease-out 0s
 		transform translateY(0)
+		@media (max-width 768px)
+			margin-right 0
+			margin-bottom 15px
+			width 200px
 		
 	&__but
 		color #1a1b28
@@ -139,6 +208,9 @@
 		padding-top 16px
 		padding-left 40px
 		width 180px
+		@media (max-width 768px)
+			width 200px
+			padding-left 65px
 		&:hover
 			color #fff
 	&__button-description::after
@@ -156,11 +228,11 @@
 	&__button-description:hover::after, 
 	&__button-description:focus::after 
 		animation sheen 1s forwards
-		width 180px
+		width 200px
 
 	@keyframes sheen {
 	  100% {
-	    transform: translate(0em, 0);
+		transform: translate(0em, 0);
 	  }
 	}
 			
@@ -210,17 +282,23 @@
 .title
 	&_color-size
 		background #fff
-	    position absolute
-	    z-index 3
-	    width 730px
-	    height 384px
-	    bottom -20px
+		position absolute
+		z-index 3
+		width 730px
+		height 384px
+		bottom -20px
+		@media (max-width 1100px)
+			position relative
+			width 100%
 	&__name
 		display flex
-		justify-content space-between
-		align-items flex-end
+		justify-content space-around
+		align-items center
 		padding 50px 0 50px 90px
 		width 600px
+		@media (max-width 1100px)
+			width 100%
+			padding 20px 0 20px 0px
 	&__logo
 		margin-bottom 12px
 	&__city-content
@@ -238,6 +316,8 @@
 		border-radius 1px
 		margin-bottom 15px
 		margin-right 65px
+		@media (max-width 768px)
+			margin-right 25px
 	
 	&__quantity
 		line-height 1
@@ -252,6 +332,12 @@
 		padding-left 90px
 		width 600px
 		padding-bottom 60px
+		@media (max-width 1100px)
+			width auto
+			text-align center
+			padding-left 0
+			font-size 24px
+			padding-bottom 45px
 
 .quantity
 	position relative
@@ -273,6 +359,13 @@
 		align-items center
 		width 600px
 		padding-left 90px
+		@media (max-width 1100px)
+			padding-left 0
+			justify-content space-around
+			width 100%
+		@media (max-width 768px)
+			flex-wrap wrap
+			width 90%
 	&__item
 		color #848486
 		font-size 13px
@@ -745,22 +838,21 @@ path#path1:hover, #path2:hover, #path3:hover,
 	padding-top 70px
 	@media(max-width 768px)
 		padding-top 10px
-
 .wrapper_map
+	position relative
+#map
 	margin -320px 0 95px 0
 	height 640px
 	position relative
-	background-image url('%=static=%/content/map_img.jpg')
-	background-position center
-	background-repeat no-repeat
-	background-size cover
+	z-index 5
+
 	@media(max-width 768px)
-		background-image none
 		height 570px
 		margin-bottom 0
 		
 .nav-map
 	position absolute
+	z-index 6
 	height 640px
 	width 490px
 	top -40px

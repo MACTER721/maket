@@ -8,7 +8,10 @@ html(class="no-js", lang="ru")
     head
         +head(head.defaults)
     body
+        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAxuPDQdEMiyqzm30ilVkWT-kNrjCBGCIU')
         script(src='../../static/js/main.js')
+
+            
         +b.wrapper-first-scrin
             
             +b.menu._color-size
@@ -420,8 +423,9 @@ html(class="no-js", lang="ru")
                             +e.head Спортивный
                             +e.content-text Велодорожки, уличные тренажеры, футбол, волейбол, скалодром, каток
 
-        .container-fluid    
+        .container-fluid
             +b.wrapper_map
+                +b#map
                 +b.nav-map
                     +e.head Расположение
                     +e.description «Квартал Энтузиастов» находится в 15 минутах езды от центра города Уфы. Добраться до него можно с четырех крупных магистралей города, в том числе по главной транспортной артерии города — проспекту Салавата Юлаева.
@@ -503,4 +507,7 @@ html(class="no-js", lang="ru")
                             img(src='%=static=%/img/content/tw.png')
 
                 +b.sign
-                    +e.A.link(href='http://crtweb.ru/') Разработка сайта - Creative 
+                    +e.A.link(href='http://crtweb.ru/') Разработка сайта - Creative
+        
+        
+        

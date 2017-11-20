@@ -14,14 +14,14 @@ $(document).ready(function(){
 		focusOnSelect: true,
 		asNavFor: '.slider-for',
 		responsive: [
-		    {
-		      breakpoint: 991,
-		      settings: {
-		      	vertical: false,
-		        slidesToShow: 5,
-		        slidesToScroll: 1,
-		      }
-		    }
+			{
+			  breakpoint: 991,
+			  settings: {
+				vertical: false,
+				slidesToShow: 5,
+				slidesToScroll: 1,
+			  }
+			}
 		]
 	});
 	$('.slider-for').slick({
@@ -36,3 +36,6 @@ $(document).ready(function(){
 		$('.hidden-room').css('display', 'block');
 	});
 });
+
+
+
